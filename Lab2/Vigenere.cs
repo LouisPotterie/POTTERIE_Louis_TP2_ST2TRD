@@ -9,7 +9,7 @@ namespace Lab2
     {
         public static string Code(string inputText, bool toDecrypt)
         {
-            var keyword = "LOUIS";
+            var keyword = "ZOE";
             var key = GenerateKey(inputText, keyword);
             // Ternary operator - Google it
             return toDecrypt ? Decrypt(inputText, key) : Encrypt(inputText, key);
@@ -17,18 +17,20 @@ namespace Lab2
         
         
 
-        static String GenerateKey(string str, string key)
+        static String GenerateKey(string inputText, string key)
         {
-            int x = str.Length;
- 
-            for (int i = 0; ; i++)
+            if (inputText.Length <= key.Length)
             {
-                if (x == i)
-                    i = 0;
-                if (key.Length == str.Length)
-                    break;
-                key+=(key[i]);
+                return key;
             }
+            else
+            {
+                for (int i = 0; i<inputText.Length; i++)
+                {
+                    key+=(key[i]);
+                }
+            }
+            
             Show($"Vigenere Key used :{key}");
             return key;
         }
@@ -69,6 +71,15 @@ namespace Lab2
                         break;
                     case 'ë':
                         inputTextBuilder[i] = 'e';
+                        break;
+                    case 'ç':
+                        inputTextBuilder[i] = 'c';
+                        break;
+                    case 'ô':
+                        inputTextBuilder[i] = 'o';
+                        break;
+                    case '%':
+                        inputTextBuilder[i] = '%';
                         break;
                     case '’' : 
                         inputTextBuilder[i] = ' ';
@@ -121,6 +132,9 @@ namespace Lab2
                             break;
                         case '?':
                             output += '?';
+                            break;
+                        case '%':
+                            output += '%';
                             break;
                         case '!':
                             output += '!';
@@ -213,6 +227,9 @@ namespace Lab2
                             break;
                         case '/':
                             decryptedText += '/';
+                            break;
+                        case '%':
+                            decryptedText += '%';
                             break;
                         case '?':
                             decryptedText += '?';

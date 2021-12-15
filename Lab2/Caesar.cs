@@ -51,6 +51,15 @@ namespace Lab2
                     case 'ë':
                         inputTextBuilder[i] = 'e';
                         break;
+                    case 'ç':
+                        inputTextBuilder[i] = 'c';
+                        break;
+                    case 'ô':
+                        inputTextBuilder[i] = 'o';
+                        break;
+                    case '%':
+                        inputTextBuilder[i] = '%';
+                        break;
                     case '’' : 
                         inputTextBuilder[i] = ' ';
                         break;

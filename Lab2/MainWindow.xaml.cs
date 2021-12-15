@@ -11,7 +11,7 @@ namespace Lab2
         
         private void Infos(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("French accent are removed during the encryption process");
+            MessageBox.Show(" 1) French accent are removed during the encryption process \n\r 2) The Vigenere Key is set up automatically \n\r 3) The encryption is not relevant for Kanji or math formulas");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
