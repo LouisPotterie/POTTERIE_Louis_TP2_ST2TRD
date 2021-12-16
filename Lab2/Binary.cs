@@ -88,13 +88,12 @@ namespace Lab2
                 {
                     output.Append(Convert.ToString(c, 2).PadLeft(8, '0'));
                 }
-
-                var taille = output.Length;
-                /*
+                
+                
                 for (var i = 2; i < output.Length; i += 3)
                 {
                     output.Insert(i, " ");
-                }*/
+                }
                 
                 return output.ToString();
 
@@ -115,7 +114,7 @@ namespace Lab2
 
                
 
-                //inputText = inputText.Replace(" ", "");
+                inputText = inputText.Replace(" ", "");
      
                 for (int i = 0; i < inputText.Length; i += 8)
                 {
