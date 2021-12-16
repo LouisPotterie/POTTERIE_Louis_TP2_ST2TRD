@@ -1,6 +1,8 @@
 # POTTERIE_Louis_TP2_ST2TRD
 v1
 
+Solo group
+
 Encryption WPF app with 3 kind of encryption : 
 - Caesar 
 - Binary
