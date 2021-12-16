@@ -1,7 +1,7 @@
 # POTTERIE_Louis_TP2_ST2TRD
 v1
 
-Solo group
+Solo group : Louis Potterie 
 
 Encryption WPF app with 3 kind of encryption : 
 - Caesar 
